@@ -1,0 +1,78 @@
+MPEREIRA
+
+1. Indique que nous sommes sur la branche master, et qu'il y a aucun commit.
+
+2. git branch -m develop
+  git status 
+  echo "#TP2: Gestion des branches" > README.md
+  git add README.md
+  git commit -m "    Creation et ajout d'un readme avec comme titre TP2 Destion des branches"
+  
+3. git switch -c feature1
+  echo "Ceci est une description du projet" > README.md
+  
+ 4.git switch develop
+ git merge feature1
+
+5.
+  git switch -c feature2
+  vim README.md
+  git add README.md
+  git commit -m "Modification du titre avec ajout du NomPrenom"
+  
+6. git switch develop
+  git switch -c feature3
+  vim README.md
+  git add README.md
+  git commit
+  
+7. git switch develop 
+  git merge feature2
+  git switch develop 
+  git merge feature3
+  Création d'un conflit lorsqu'on désire merge feature3
+  
+8. vim README.md
+  git merge feature3
+  git add README.md
+  git commit -m "Modification du titre"
+  git merge feature3
+  
+-REBASE-
+
+1. vim README.md
+  git add README.md
+  git commit -m "Ajout dasn README.md - partie rebase"
+  
+2. vim README.md
+  git add README.md
+  git commit -m "    Ajout dans README.md - mention feature4"
+  
+3.vim README.md
+  git add README.md
+  git commit -m "    Ajout dans README.md - derniere ligne feature4"
+  
+4. git rebase -i HEAD~2
+
+5. git switch develop
+  vim README.md
+  git add README.md
+  git commit -m "Modification du titre"
+  
+6. git merge feature4
+  vim README.md
+  git add README.md
+  git commit -m "Correction conflit"
+  git merge feature4
+  
+  git rebase feature4
+  vim README.md
+  git add README.md
+  git rebase --continue
+  
+7. git merge : La commande merge permet de fusionner des branches ensemble
+
+8. git rebase : Permet de fusionner des commit entre-eux ou bien changer la branche d'un commit, dans le TP on a rebase vers la branche develop.
+
+    
+
